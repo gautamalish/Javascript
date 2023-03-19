@@ -1,0 +1,17 @@
+let a =Math.floor(Math.random()*100)
+console.log(a)
+let guess=1
+let uinput=prompt("Guess the number: ")
+while(uinput!=a){
+  console.log("Wrong input")
+if(uinput<a){
+  console.log("You guessed low, guess higher")
+}
+else if(uinput>a){
+  console.log("You guessed high, guess lower")
+}
+  uinput=prompt("Guess the number: ")
+  guess++
+  }
+console.log("You guessed right")
+console.log("Your points are: ",100-guess)
