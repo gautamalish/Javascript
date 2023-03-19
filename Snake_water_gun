@@ -1,0 +1,43 @@
+console.log("\t\t\t\t Welcome to the game Snake,Water,Gun")
+let play=prompt("Do you want to play the game?(y/n)")
+while(play!='n' && play=='y'){
+  let com=Math.floor((Math.random()*3)+1)
+  if(com==3){
+    com='G'
+  }
+  else if(com==2){
+    com='W'
+  }
+  else if(com==1){
+    com='S'
+  }
+  let ask=prompt("Enter S,W or G: ")
+  if(ask=='S'|| ask=='s' && com=='G' || com=='g'){
+  console.log("The computer entered: ",com)
+  console.log("Computer wins!")
+  }
+  else if(ask=='G'||ask=='g' && com=='S'||com=='s'){
+  console.log("The computer entered: ",com)
+  console.log("You win!")
+}
+  else if(ask=='W'||ask=='w' && com=='S'||com=='s'){
+    console.log("The computer entered: ",com)
+    console.log("Computer wins!")
+}
+  else if(ask=='S'||ask=='s' && com=='W'||com=='w'){
+    console.log("The computer entered: ",com)
+    console.log("Computer wins!")
+}
+  else if(ask==com){
+    console.log("You both entered the same therefore it's a tie")
+}
+  else if(ask=='W'||ask=='w' && com=='G'||com=='g'){
+    console.log("The computer entered: ",com)
+    console.log("You win!")
+}
+  else if(ask=='G'|| ask=='g' && com=='W'||com=='w'){
+  console.log("The computer entered: ",com)
+  console.log("Computer wins!")
+}
+  play=prompt("Do you want to play again?(y/n)")
+}
